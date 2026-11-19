@@ -25,6 +25,14 @@
   </tr>
 </table>
 
+**Results:** live KPIs, mouse heatmap, typing-rhythm histogram and mood radar
+
+<img src="docs/screenshot-results.png" alt="Results dashboard with KPIs, heatmap, typing rhythm and mood radar" width="100%" />
+
+**Personal model:** unlocks after 5 saved sessions, honest about its accuracy
+
+<img src="docs/screenshot-model.png" alt="Personal model card with save and delete buttons" width="100%" />
+
 ## Features
 - 🔥 Live mouse **heatmap** (canvas, additive glow)
 - ⌨️ **Typing rhythm** histogram (intervals between keystrokes)

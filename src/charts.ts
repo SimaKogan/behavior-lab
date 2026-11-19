@@ -45,5 +45,8 @@ export function radar(c: HTMLCanvasElement, vals: number[], labels: string[]) {
   x.beginPath(); vals.forEach((v, i) => x.lineTo(...pt(i, (R * v) / 5))); x.closePath();
   x.fillStyle = `rgba(${ACC},.35)`; x.fill(); x.strokeStyle = `rgb(${ACC2})`; x.lineWidth = 2; x.stroke();
   x.fillStyle = TXT; x.font = '12px system-ui'; x.textAlign = 'center'; x.textBaseline = 'middle';
-  labels.forEach((l, i) => x.fillText(l, ...pt(i, R + 18)));
+  labels.forEach((l, i) => {
+    const [lx, ly] = pt(i, R + 18), tw = x.measureText(l).width / 2 + 6;
+    x.fillText(l, Math.min(w - tw, Math.max(tw, lx)), ly); // keep labels inside the canvas
+  });
 }
