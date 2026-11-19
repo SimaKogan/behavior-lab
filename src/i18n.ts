@@ -1,0 +1,58 @@
+export type Lang = 'he' | 'ru' | 'en';
+export const LANGS: Lang[] = ['he', 'ru', 'en'];
+export const EMO = ['joy', 'fear', 'anger', 'sadness', 'stress', 'tired', 'focus'];
+
+const d: Record<Lang, Record<string, string>> = {
+  en: {
+    sub: 'Discover how you move, click and type, measured live in your browser.',
+    priv: 'Everything is computed on your device|Key characters are never recorded, only timing|Nothing is sent anywhere; you can download your data',
+    consent: 'I agree to let this page measure my mouse and keyboard timing locally.',
+    start: 'Start', s1: 'How do you feel right now? (0–5)', s2: 'Type this text',
+    sample: 'The quick brown fox jumps over the lazy dog while the sun sets slowly behind the hills.',
+    tip: 'Move the mouse freely: your trail is drawn live.', live: 'Live heatmap', finish: 'Show my results',
+    r_title: 'Your behavior profile', k_speed: 'Cursor speed (px/s)', k_int: 'Avg key interval (ms)',
+    k_back: 'Backspace share', k_clicks: 'Clicks', c_heat: 'Mouse heatmap', c_rhythm: 'Typing rhythm (ms between keys)',
+    c_radar: 'Self-reported mood', dl: 'Download JSON', again: 'Start over',
+    note: 'These are raw measurements, not a diagnosis or an emotion prediction.',
+    m_title: 'My personal model', m_need: 'Saved {n}/5 sessions. Run {k} more to unlock your model.',
+    m_save: 'Save session to train', m_saved: 'Saved ✓', m_clear: 'Delete my saved data',
+    m_rep: 'Reported', m_pred: 'Predicted', m_err: 'Error / baseline', m_win: 'better than average', m_lose: 'not better yet',
+    m_note: 'A tiny ridge-regression model trained only on your own saved sessions, inside this browser. Early results are rough; the last column shows whether it beats just guessing your average.',
+    e_joy: 'Joy', e_fear: 'Fear', e_anger: 'Anger', e_sadness: 'Sadness', e_stress: 'Stress', e_tired: 'Tiredness', e_focus: 'Focus',
+  },
+  ru: {
+    sub: 'Узнай, как ты двигаешь мышью, кликаешь и печатаешь. Всё измеряется прямо в браузере.',
+    priv: 'Всё считается на твоём устройстве|Символы клавиш не записываются, только тайминги|Ничего никуда не отправляется; данные можно скачать',
+    consent: 'Я разрешаю странице локально измерять тайминги мыши и клавиатуры.',
+    start: 'Начать', s1: 'Как ты себя чувствуешь сейчас? (0–5)', s2: 'Набери этот текст',
+    sample: 'Быстрая коричневая лиса прыгает через ленивую собаку, пока солнце медленно садится за холмы.',
+    tip: 'Води мышью свободно: след рисуется вживую.', live: 'Тепловая карта вживую', finish: 'Показать результаты',
+    r_title: 'Твой поведенческий профиль', k_speed: 'Скорость курсора (px/с)', k_int: 'Средний интервал клавиш (мс)',
+    k_back: 'Доля Backspace', k_clicks: 'Клики', c_heat: 'Тепловая карта мыши', c_rhythm: 'Ритм печати (мс между клавишами)',
+    c_radar: 'Самооценка настроения', dl: 'Скачать JSON', again: 'Заново',
+    note: 'Это сырые измерения, а не диагноз и не предсказание эмоций.',
+    m_title: 'Моя персональная модель', m_need: 'Сохранено {n}/5 сессий. Пройди ещё {k}, чтобы открыть модель.',
+    m_save: 'Сохранить сессию для обучения', m_saved: 'Сохранено ✓', m_clear: 'Удалить мои данные',
+    m_rep: 'Ты указала', m_pred: 'Модель', m_err: 'Ошибка / база', m_win: 'лучше среднего', m_lose: 'пока не лучше',
+    m_note: 'Крошечная ridge-регрессия, обученная только на твоих сохранённых сессиях прямо в браузере. Сначала результат грубый; последний столбец показывает, лучше ли она, чем простое угадывание твоего среднего.',
+    e_joy: 'Радость', e_fear: 'Страх', e_anger: 'Злость', e_sadness: 'Грусть', e_stress: 'Стресс', e_tired: 'Усталость', e_focus: 'Фокус',
+  },
+  he: {
+    sub: 'גלו איך אתם מזיזים עכבר, לוחצים ומקלידים. הכול נמדד חי בדפדפן.',
+    priv: 'הכול מחושב במכשיר שלכם|תווי המקלדת לא נשמרים, רק תזמונים|שום דבר לא נשלח; אפשר להוריד את הנתונים',
+    consent: 'אני מאשר/ת לדף למדוד מקומית תזמוני עכבר ומקלדת.',
+    start: 'התחלה', s1: 'איך אתם מרגישים עכשיו? (0–5)', s2: 'הקלידו את הטקסט',
+    sample: 'השועל החום המהיר קופץ מעל הכלב העצלן בזמן שהשמש שוקעת לאט מאחורי הגבעות.',
+    tip: 'הזיזו את העכבר חופשי: המסלול מצויר חי.', live: 'מפת חום חיה', finish: 'הצג תוצאות',
+    r_title: 'פרופיל ההתנהגות שלך', k_speed: 'מהירות סמן (px/s)', k_int: 'מרווח מקשים ממוצע (ms)',
+    k_back: 'שיעור Backspace', k_clicks: 'לחיצות', c_heat: 'מפת חום של העכבר', c_rhythm: 'קצב הקלדה (ms בין מקשים)',
+    c_radar: 'דיווח עצמי על מצב רוח', dl: 'הורדת JSON', again: 'מחדש',
+    note: 'אלו מדידות גולמיות, לא אבחנה ולא תחזית רגשות.',
+    m_title: 'המודל האישי שלי', m_need: 'נשמרו {n}/5 סשנים. עוד {k} כדי לפתוח את המודל.',
+    m_save: 'שמירת סשן לאימון', m_saved: 'נשמר ✓', m_clear: 'מחיקת הנתונים שלי',
+    m_rep: 'דיווחת', m_pred: 'המודל', m_err: 'שגיאה / בסיס', m_win: 'טוב מהממוצע', m_lose: 'עדיין לא טוב יותר',
+    m_note: 'מודל רגרסיית ridge זעיר שמאומן רק על הסשנים השמורים שלך, בתוך הדפדפן. בהתחלה התוצאות גסות; העמודה האחרונה מראה אם הוא טוב יותר מניחוש הממוצע שלך.',
+    e_joy: 'שמחה', e_fear: 'פחד', e_anger: 'כעס', e_sadness: 'עצב', e_stress: 'לחץ', e_tired: 'עייפות', e_focus: 'ריכוז',
+  },
+};
+export const t = (l: Lang, k: string) => d[l][k] ?? k;
